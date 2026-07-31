@@ -13,65 +13,13 @@
 // Buttons are disabled if there are no relevant items to be transferred.
 
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
+import transferListData, { type TransferListItem }  from "./data";
 import './TransferList.css';
 
 
-interface TransferListItem {
-  id: string;
-  text: string;
-  selected: boolean;
-}
-
-const data = [
-  [
-    {
-      id: nanoid(),
-      text: 'HTML',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'CSS',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'Javascript',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'Typescript',
-      selected: false,
-    },
-  ],
-  [
-    {
-      id: nanoid(),
-      text: 'React',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'Angular',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'Vue',
-      selected: false,
-    },
-    {
-      id: nanoid(),
-      text: 'Svelte',
-      selected: false,
-    },
-  ],
-];
 
 const TransferList = () => {
-  const [lists, setLists] = useState<TransferListItem[][]>(data);
+  const [lists, setLists] = useState<TransferListItem[][]>(transferListData);
 
   const transferItems = (
     transferDirection: 'left' | 'right',

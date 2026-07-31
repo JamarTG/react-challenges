@@ -57,7 +57,10 @@ const ContactForm = () => {
         alert(data);
       }
     } catch (error) {
-      alert(error.message);
+      if(error instanceof Error) {
+        alert(error.message);
+      }
+      
     }
   };
 

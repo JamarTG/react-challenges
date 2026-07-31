@@ -14,36 +14,11 @@
 // You may modify the markup (e.g. adding ids, data attributes, replacing some tags, etc) and use client-side rendering instead.
 // You may want to think about ways to improve the user experience of the application and implement them (you get bonus credit for doing that during interviews).
 
-import { nanoid } from 'nanoid';
-
 import './Accordion.css';
-import AccordionItem from './AccordionItem';
+import accordionItemsData from "./data";
 import { useState } from 'react';
+import AccordionItem from './AccordionItem';
 
-const accordionItemsData = [
-  {
-    id: nanoid(),
-    title: 'HTML',
-    content:
-      'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.',
-    showContent: false,
-  },
-  {
-    id: nanoid(),
-    title: 'CSS',
-    content:
-      'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.',
-    showContent: false,
-  },
-  {
-    id: nanoid(),
-    title: 'JavaScript',
-    content:
-      'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.',
-
-    showContent: false,
-  },
-];
 
 const Accordion = () => {
   const [accordionItems, setAccordionItems] = useState(accordionItemsData);
@@ -64,7 +39,6 @@ const Accordion = () => {
         <AccordionItem
           key={id}
           toggleShowContent={() => toggleShowContent(id)}
-          showContent={accordionItem.showContent}
           {...accordionItem}
         />
       ))}
