@@ -1,11 +1,11 @@
 import './App.css';
-import TransferList from './components/TransferListMedium/TransferList';
+import ImageCarousel from './components/ImageCarouselMedium/ImageCarousel';
 
 
 function App() {
   return (
     <>
-     <TransferList />
+     <ImageCarousel />
     </>
   );
 }
