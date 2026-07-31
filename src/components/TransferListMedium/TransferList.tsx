@@ -77,6 +77,7 @@ const TransferList = () => {
     transferDirection: 'left' | 'right',
     shouldTranferAllItems = false
   ) => {
+
     setLists(([listA, listB]) => {
       if (shouldTranferAllItems && transferDirection === 'right')
         return [[], [...listA, ...listB]];
@@ -142,7 +143,7 @@ const TransferList = () => {
         transferItems('right');
         break;
       case '>>':
-        transferItems('left', true);
+        transferItems('right', true);
         break;
     }
 
