@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.flex p {
+    font-size: 40px;
+}
+
+.flex p span {
+    font-size: 20px;
+}
+
+
+.seconds {
+    font-size: 30px;
+}
+
+.milliseconds {
+    font-size: 20px;
+}
