@@ -1,0 +1,42 @@
+/* p tag with default margin caused hell lol */
+p {
+  margin: 0;
+}
+
+.accordion-icon::before {
+  content: '▼';
+  width: 100px;
+}
+
+.accordion-container {
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0px;
+  border:1px solid grey;
+}
+
+.accordion-item {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;}
+
+.accordion-item-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+
+.accordion-item-content {
+  padding: 0px 5px;
+  border: 1px solid grey;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
