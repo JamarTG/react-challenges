@@ -19,7 +19,7 @@ import './TransferList.css';
 
 interface TransferListItem {
   id: string;
-  text:string;
+  text: string;
   selected: boolean;
 }
 
@@ -84,7 +84,7 @@ const TransferList = () => {
       if (shouldTranferAllItems && transferDirection === 'left')
         return [[...listA, ...listB], []];
 
-      const transferringListItems:TransferListItem[] = [];
+      const transferringListItems: TransferListItem[] = [];
 
       const destinationList =
         transferDirection === 'right' ? [...listB] : [...listA];
@@ -105,13 +105,13 @@ const TransferList = () => {
 
       return transferDirection == 'right'
         ? [
-            [...sourceListExcludingMovingItems],
-            [...destinationList, ...transferringListItems],
-          ]
+          [...sourceListExcludingMovingItems],
+          [...destinationList, ...transferringListItems],
+        ]
         : [
-            [...destinationList, ...transferringListItems],
-            [...sourceListExcludingMovingItems],
-          ];
+          [...destinationList, ...transferringListItems],
+          [...sourceListExcludingMovingItems],
+        ];
     });
   };
 
@@ -150,6 +150,12 @@ const TransferList = () => {
     e.currentTarget.textContent;
   };
 
+  const disableAllToRight = lists[1].length === 0;
+  const disableAllToLeft = lists[0].length === 0;
+  
+  const disableOneToRight = lists[0].every(listItem => !listItem.selected);
+  const disableOneToLeft = lists[1].every(listItem => !listItem.selected);;
+
   return (
     <div className="lists-container">
       {lists.map((list) => {
@@ -171,11 +177,12 @@ const TransferList = () => {
         );
       })}
 
+
       <div className="btn-container">
-        <button onClick={handleButtonClick}>{'<<'}</button>
-        <button onClick={handleButtonClick}>{'<'}</button>
-        <button onClick={handleButtonClick}>{'>'}</button>
-        <button onClick={handleButtonClick}>{'>>'}</button>
+        <button disabled={disableAllToRight}  onClick={handleButtonClick}>{'<<'}</button>
+        <button disabled={disableOneToLeft}  onClick={handleButtonClick}>{'<'}</button>
+        <button disabled={disableOneToRight} onClick={handleButtonClick}>{'>'}</button>
+        <button disabled={disableAllToLeft}  onClick={handleButtonClick}>{'>>'}</button>
       </div>
     </div>
   );
