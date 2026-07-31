@@ -1,10 +1,11 @@
 import './App.css';
-import StopWatch from './components/StopWatchMedium/StopWatch';
+import TransferList from './components/TransferListMedium/TransferList';
+
 
 function App() {
   return (
     <>
-      <StopWatch />
+     <TransferList />
     </>
   );
 }

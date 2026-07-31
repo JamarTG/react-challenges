@@ -1,9 +1,14 @@
 .lists-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  width: 20vw;
+  border: 1px solid silver
 }
 
 .lists-container > * {
   flex: 3;
+  padding: 10px;
+  margin: 10px;
 }
 
 .lists-container > :nth-child(2) {
