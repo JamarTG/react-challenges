@@ -16,6 +16,13 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import './TransferList.css';
 
+
+interface TransferListItem {
+  id: string;
+  text:string;
+  selected: boolean;
+}
+
 const data = [
   [
     {
@@ -64,7 +71,7 @@ const data = [
 ];
 
 const TransferList = () => {
-  const [lists, setLists] = useState(data);
+  const [lists, setLists] = useState<TransferListItem[][]>(data);
 
   const transferItems = (
     transferDirection: 'left' | 'right',
@@ -76,7 +83,7 @@ const TransferList = () => {
       if (shouldTranferAllItems && transferDirection === 'left')
         return [[...listA, ...listB], []];
 
-      const transferringListItems = [];
+      const transferringListItems:TransferListItem[] = [];
 
       const destinationList =
         transferDirection === 'right' ? [...listB] : [...listA];
