@@ -1,11 +1,12 @@
 import './App.css';
-import ImageCarousel from './components/ImageCarouselMedium/ImageCarousel';
+
+import TicTacToe from './components/TicTacToeMedium/TicTacToe';
 
 
 function App() {
   return (
     <>
-     <ImageCarousel />
+     <TicTacToe />
     </>
   );
 }
