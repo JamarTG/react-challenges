@@ -23,7 +23,7 @@ const ImageCarousel = () => {
         if (activeImageIndex >= imageCarouselData.length - 1) {
             setActiveImageIndex(0)
             return;
-        } 
+        }
         setActiveImageIndex(prevActiveImageIndex => prevActiveImageIndex + 1);
     }
 
@@ -31,7 +31,7 @@ const ImageCarousel = () => {
         if (activeImageIndex === 0) {
             setActiveImageIndex(imageCarouselData.length - 1)
             return;
-        } 
+        }
         setActiveImageIndex(prevActiveImageIndex => prevActiveImageIndex - 1);
     }
 
@@ -43,7 +43,7 @@ const ImageCarousel = () => {
 
             <div className="carousel-indicator">
                 {
-                    imageCarouselData.map((_,idx) => {
+                    imageCarouselData.map((_, idx) => {
                         return <div onClick={() => setActiveImageIndex(idx)} className={`${idx === activeImageIndex ? 'active-' : ""}carousel-indicator-circle`}></div>
                     })
                 }
