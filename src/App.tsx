@@ -1,12 +1,10 @@
 import './App.css';
-
-import TicTacToe from './components/TicTacToeMedium/TicTacToe';
-
+import { Clock } from './components/ClockMedium/Clock';
 
 function App() {
   return (
     <>
-     <TicTacToe />
+     <Clock />
     </>
   );
 }
