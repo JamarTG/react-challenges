@@ -1,10 +1,10 @@
 import './App.css';
-import { Clock } from './components/ClockMedium/Clock';
+import TrafficLight from './components/TrafficLightMedium/TrafficLight';
 
 function App() {
   return (
     <>
-     <Clock />
+     <TrafficLight />
     </>
   );
 }
