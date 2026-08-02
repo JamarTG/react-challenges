@@ -1,0 +1,15 @@
+.task-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    width: 300px;
+    border: 1px solid rgb(237, 234, 234);
+    padding: 4px;
+    border-radius: 10px;
+}
+
+button {
+    height: 1.5rem;
+}

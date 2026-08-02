@@ -1,10 +1,10 @@
 import './App.css';
-import TrafficLight from './components/TrafficLightMedium/TrafficLight';
+import TodoList from './components/TodoListMedium/TodoList';
 
 function App() {
   return (
     <>
-     <TrafficLight />
+     <TodoList />
     </>
   );
 }
