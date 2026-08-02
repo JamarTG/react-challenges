@@ -37,7 +37,7 @@ const TrafficLight = () => {
 
     },colorDuration)
 
-    return () => clearInterval(id)
+    return () => clearTimeout(id)
 
   },[activeColor,colorDuration])
 
