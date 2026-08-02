@@ -43,14 +43,16 @@ const TodoList = () => {
         Submit
       </button>
 
-      {tasks.map((task) => {
-        return (
-          <div className="task-container" key={task.id}>
-            <p>{task.description}</p>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
-          </div>
-        );
-      })}
+      <ul>
+        {tasks.map((task) => {
+          return (
+            <li className="task-container" key={task.id}>
+              <p>{task.description}</p>
+              <button onClick={() => deleteTask(task.id)}>Delete</button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
