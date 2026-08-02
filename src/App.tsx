@@ -1,10 +1,10 @@
 import './App.css';
-import TodoList from './components/TodoListMedium/TodoList';
+import StarRating from './components/StarRatingMedium/StarRating';
 
 function App() {
   return (
     <>
-     <TodoList />
+     <StarRating />
     </>
   );
 }
